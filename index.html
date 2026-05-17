@@ -524,7 +524,6 @@
     $('result-section').style.display = 'none';
 
     try {
-      // Convert image to base64
       const base64 = await toBase64(selectedFile);
       const mediaType = selectedFile.type || 'image/jpeg';
 

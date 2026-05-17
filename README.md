@@ -37,7 +37,9 @@ Or connect the GitHub repo in the [Vercel dashboard](https://vercel.com) — it 
 
 ## Model & Prompt
 
-**Model:** `claude-sonnet-4-6` (Claude claude-sonnet-4-6 — excellent at document/image understanding)
+**Model:** `gemini-2.0-flash` — Google's free vision model (1,500 requests/day free, no credit card required)
+
+**Get a free API key:** https://aistudio.google.com — click "Get API key", takes ~30 seconds.
 
 **Prompt strategy:**
 ```
@@ -61,10 +63,10 @@ The prompt instructs the model to return **pure JSON only** (no markdown fences)
 | Layer | Choice |
 |---|---|
 | Frontend | Vanilla HTML / CSS / JS (single file) |
-| AI | Anthropic Claude API — `claude-sonnet-4-6` |
+| AI | Google Gemini API — `gemini-2.0-flash` (free tier) |
 | Hosting | Static — Vercel / any CDN / local file |
 | Storage | In-memory (`submissions[]` array) |
 
 ## API Key Security Note
 
-The API key is typed into the browser and sent directly to `api.anthropic.com`. It is **never logged or stored** by this app. For production use, proxy the request through a backend to keep the key server-side.
+The API key is typed into the browser and sent directly to `generativelanguage.googleapis.com`. It is **never logged or stored** by this app. For production use, proxy the request through a backend to keep the key server-side.
